@@ -1,0 +1,29 @@
+server:
+  port: 4001
+
+measurement:
+    metrics: mem,mem.free,processors,instance.uptime,uptime,systemload.average,heap.committed,heap.init,heap.used,heap,nonheap.committed,nonheap.init,nonheap.used,nonheap,threads.peak,threads.daemon,threads.totalStarted,threads
+
+application:
+    services:
+       - name: Service 1
+         serviceId: ms-dummy-1
+         description: Dummy Microservice
+       - name: Service 2
+         serviceId: ms-fool-1
+         description: Fool Microservice
+
+spring:
+    application:
+        name: influxdb-data-collector
+
+eureka:
+    instance:
+        preferIpAddress: true
+    client:
+        registerWithEureka: true
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/
+        enabled: true
+
+
