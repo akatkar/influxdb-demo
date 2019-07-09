@@ -1,4 +1,4 @@
-package com.akatkar.samples.influxdb.discovery;
+package com.akatkar.samples.influxdb.app.discovery;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
